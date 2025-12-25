@@ -49,7 +49,7 @@
     background-color: white;
  }
 
-/************ inside left-frame ************/
+/************ left-frame starts ************/
  .main-frame .left-frame .left-1 {
     position: relative;
     width: 228px;
@@ -302,3 +302,129 @@
  .main-frame .left-frame .left-5 .left-5-2 p {
     margin: 7px;
  }
+
+ /************ middle-frame starts ************/
+
+ .main-frame .middle-frame .middle-top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 971px;
+    height: 463.09px;
+    background-color: white;
+    align-items: center; /* centers horizontally */
+ }
+
+ .middle-top .middle-top-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+ }
+
+ .middle-top .middle-top-left p {
+    margin: 0 0 10px 0;
+ }
+
+ .middle-top .middle-top-left .middle-top-left-1 {
+    width: 499.51 px;
+    height: 116.74 px;
+    font-style: bold;
+    font-size: 48px;
+    font-weight: 700;
+ }
+ .middle-top .middle-top-left .middle-top-left-2 {
+    width: 424.44px;
+    height: 85.61px;
+    font-size: 16px;
+    text-align: left;
+ }
+
+ .middle-top .middle-top-left .middle-top-left-3 {
+    width: 154px;
+    height: 49.62px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #ffb400;
+    border-radius: 5px;
+ }
+.middle-top .middle-top-left .middle-top-left-3 .btn-box {
+    width: 154px;
+    height: 51px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffb400;
+     border-radius: 5px;
+}
+
+.middle-top .middle-top-left .middle-top-left-3 .btn-box button {
+    background-color: #ffb400;
+    border-style: none;
+    line-height: 19px;
+    font-weight: 500;
+    font-size: 16px;
+}
+.middle-top .middle-top-left .middle-top-left-3 .btn-box img {
+    width: 16px;
+    height: 16px;
+}
+
+.middle-top .middle-top-right img {
+    width: 326.06px;
+    height: 446.63px;
+    margin-top: 21px;
+}
+
+ .polygon-icon {
+    width: 16.02px;
+    height: 15.57px;
+    margin-top: 424.09px;
+    margin-left: 917.96px;
+    position: absolute;
+}
+.rectangle-icon-1 {
+    width: 15.93px;
+    height: 15.65px;
+    margin-bottom: 276.44px;
+    margin-left: 892.37px;
+    position: absolute;
+}
+.rectangle-icon-2 {
+    width: 15.93px;
+    height: 15.65px;
+    margin-top: 170.69px;
+    margin-left: 370.4px;
+    position: absolute;
+}
+ .ellipse-icon-1 {
+    width: 16.02px;
+    height: 15.57px;
+    margin-bottom: 308.33px;
+    margin-left: 504.45px;
+    position: absolute;
+}
+ .ellipse-icon-2 {
+    width: 16.02px;
+    height: 15.57px;
+    margin-bottom: 409.66px;
+    margin-left: 20px;
+    position: absolute;
+}
+ .ellipse-icon-3 {
+    width: 16.02px;
+    height: 15.57px;
+    margin-top: 419.22px;
+    margin-left: 84.1px;
+    position: absolute;
+}
+.ellipse-icon-4 {
+    width: 16.02px;
+    height: 15.57px;
+    margin-top: 324.09px;
+    margin-left: 517.96px;
+    position: absolute;
+}
