@@ -1,1 +1,188 @@
-<h1>Hello world, you are in Authors!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//maxcdn.bootstrap.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="main-frame">
+            <!------------- left-frame  ---------------->
+            <div class="left-frame">
+                <!------------- left-1  ---------------->
+                <div class="left-1">
+                    <div class="left-1-profile">
+                        <img src="images/profile.svg" width="156px" height="142px" style="border-radius: 50%;" alt="profile-photo">
+                    </div>
+                    <div class="left-1-name"><%=user.name%></div>
+                    <div class="left-1-profession"><%=user.profession%></div>
+                    <div class="left-1-icons">
+                        <a class="link-href" href="https://www.facebook.com/">
+                            <div class="icon">
+                                <img src="icons/Facebook.svg" class="icon-1" alt="">
+                            </div>
+                        </a>
+                        <a class="link-href" href="">
+                            <div class="icon">
+                                <img src="icons/Linkedin.svg" class="icon-2" alt="">
+                            </div>
+                        </a>
+                        <a class="link-href" href="">
+                            <div class="icon">
+                                <img src="icons/Instagram.svg" class="icon-3" alt="">
+                            </div>
+                        </a>
+                        <a class="link-href" href="">
+                            <div class="icon">
+                                <img src="icons/Youtube.svg" class="icon-4" alt="">
+                            </div>
+                        </a>
+                        <a class="link-href" href="">
+                            <div class="icon">
+                                <img src="icons/Twitter.svg" class="icon-5" alt="">
+                            </div>
+                        </a>
+                        <a class="link-href" href="">
+                            <div class="icon">
+                                <img src="icons/Dribble.svg" style="border-radius: 50%;" class="icon-6" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <!------------- left-2  ---------------->
+                <div class="left-2">
+                    <div class="left-2-1">
+                        <div class="rectangle" style="width: 40px;">Age:</div><%=user.age%>
+                    </div>
+                    <div class="left-2-1">
+                        <div class="rectangle" style="width: 78px;">Residence:</div><%=user.residence%>
+                    </div>
+                    <div class="left-2-1">
+                        <div class="rectangle" style="width: 74px;">Freelance:</div><p style="color: green; margin: 0;"><%=user.freelance%></p>
+                    </div>
+                    <div class="left-2-1">
+                        <div class="rectangle" style="width: 64px;">Address:</div><%=user.address%>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <!------------- left-3  ---------------->
+                <div class="left-3">
+                    <div class="left-3-1">Languages</div>
+                    <div class="left-3-2">
+                        <p><%=user.languages[0]%></p><p>100%</p>
+                    </div>
+                    <div class="left-3-3">
+                        <div class="progress-bar">
+                            <div class="inner-bar-1"></div>
+                        </div>
+                    </div>
+                    <div class="left-3-2">
+                        <p><%=user.languages[1]%></p><p>60%</p>
+                    </div>
+                    <div class="left-3-3">
+                        <div class="progress-bar">
+                            <div class="inner-bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="left-3-2">
+                        <p><%=user.languages[2]%></p><p>85%</p>
+                    </div>
+                    <div class="left-3-3">
+                        <div class="progress-bar">
+                            <div class="inner-bar-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div> 
+                <!------------- left-4  ---------------->
+                <div class="left-4">
+                    <div class="left-3-1">Skills</div>
+                    <div class="left-3-2">
+                        <p><%=user.skills[0]%></p><p>100%</p>
+                    </div>
+                    <div class="left-3-3">
+                        <div class="progress-bar">
+                            <div class="inner-bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="left-3-2">
+                        <p><%=user.skills[1]%></p><p>90%</p>
+                    </div>
+                    <div class="left-3-3">
+                        <div class="progress-bar">
+                            <div class="inner-bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="left-3-2">
+                        <p><%=user.skills[2]%></p><p>90%</p>
+                    </div>
+                    <div class="left-3-3">
+                        <div class="progress-bar">
+                            <div class="inner-bar-6"></div>
+                        </div>
+                    </div>
+                    <div class="left-3-2">
+                        <p><%=user.skills[3]%></p><p>80%</p>
+                    </div>
+                    <div class="left-3-3">
+                        <div class="progress-bar">
+                            <div class="inner-bar-7"></div>
+                        </div>
+                    </div>
+                    <div class="left-3-2">
+                        <p><%=user.skills[4]%></p><p>70%</p>
+                    </div>
+                    <div class="left-3-3">
+                        <div class="progress-bar">
+                            <div class="inner-bar-8"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <!------------- left-5  ---------------->
+                <div class="left-5">
+                    <div class="left-3-1">Extra Skills</div>
+                    <div class="left-5-1">
+                        <img src="icons/extra-skills-icon.svg" class="icon-0" alt="">
+                        <div class="left-5-2">
+                            <p><%=user.extra_skills[0]%></p>
+                        </div>
+                    </div>
+                    <div class="left-5-1">
+                        <img src="icons/extra-skills-icon.svg" class="icon-0" alt="">
+                        <div class="left-5-2">
+                            <p><%=user.extra_skills[1]%></p>
+                        </div>
+                    </div>
+                    <div class="left-5-1">
+                        <img src="icons/extra-skills-icon.svg" class="icon-0" alt="">
+                        <div class="left-5-2">
+                            <p><%=user.extra_skills[2]%></p>
+                        </div>
+                    </div>
+                    <div class="left-5-1">
+                        <img src="icons/extra-skills-icon.svg" class="icon-0" alt="">
+                        <div class="left-5-2">
+                            <p><%=user.extra_skills[3]%></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+            </div>
+
+            <!------------- middle-frame  ---------------->
+            <div class="middle-frame">
+                
+            </div>
+
+            <!------------- right-frame  ---------------->
+            <div class="right-frame"></div>
+        </div>
+    </div>
+</body>
+</html>
