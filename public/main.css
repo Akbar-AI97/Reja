@@ -429,7 +429,7 @@
     margin-left: 517.96px;
 }
 
-/* -----------middle-bottom section start here...------------- */
+/* -----------middle-bottom section starts here...------------- */
 
 .middle-frame .middle-bottom {
     position: relative;
@@ -518,4 +518,40 @@
 .middle-bottom-bottom .grid-container .grid-item .order-btn {
     background-color: white;
     border-style: none;
+}
+
+
+/* -----------right-frame section starts here...------------- */
+.main-frame .right-frame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-frame .right-frame .contrast-icon {
+    width: 30px;
+    height: 30px;
+    margin: 50px 39px 204px 39px;
+}
+
+.main-frame .right-frame .right-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+    height: 493px;
+    margin-top: 0 22px 568px 21px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-frame .right-frame .right-menu .home-icon {
+    width: 65px;
+    height: 78px;
+}
+
+.main-frame .right-frame .right-menu img {
+    width: 40px;
+    height: 40px;
 }
