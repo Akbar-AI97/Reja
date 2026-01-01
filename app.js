@@ -29,24 +29,59 @@ app.set("views", "views");
 app.set("view engine", "ejs"); //BSSR: Backend Server Side Rendering (Creating Frontend in the Backend side)
 
 //4: Routing code
-// app.get("/hello", function(req, res) {
-//     res.end("<h1>Hello world</h1>");
-// });
-// app.get("/gift", function(req, res) {
-//     res.end("<h1>You're in the gifts section</h1>");
-// });
-
-app.post("/create-item", (req, res) => {
-    console.log(req.body);
-    res.json({test: "success"});
+app.post("/create-item", async (req, res) => {
+    console.log("user entered to /create-item");
+    try {
+        console.log(req.body);
+        const new_reja = req.body.reja;
+        db.collection("plans").insertOne({reja: new_reja});
+        res.end("successfully added");
+    } catch {
+        console.log(err);
+        res.end("something went wrong");
+    }
 })
+
+// app.post("/create-item", (req, res) => {
+//     console.log(req.body);
+//     const new_reja = req.body.reja;
+//     db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+//         if(err) {
+//             console.log(err);
+//             res.end("something went wrong");
+//         } else {
+//             res.end("successfully added");
+//         }
+//     })
+// })
 
 app.get("/author", (req, res) => {
     res.render("author", {user: user});
 })
 
-app.get("/", function(req, res) {
-    res.render("reja");
-})
+app.get("/", async (req, res) => {
+    console.log("user entered to /");
+    try {
+        const data = await db.collection("plans").find().toArray();
+        // console.log(data);
+
+        res.render("reja", { items: data });
+    } catch (err) {
+        console.log(err);
+        res.end("Something went wrong");
+    }
+});
+
+// app.get("/", function(req, res) {
+//     db.collection("plans").find().toArray((err, data) => {
+//         if(err) {
+//             console.log(err);
+//             res.end("something went wrong");
+//         } else {
+//             console.log(data);
+//             res.render("reja");
+//         }
+//     });
+// })
 
 module.exports = app;
