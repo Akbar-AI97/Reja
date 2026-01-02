@@ -1,15 +1,62 @@
 // // // MITASKS
-//TASK B
 
-function countDigit(givenString) {
-    let count = 0;
-    for (const i of givenString) {
-        if (i >= '0' && i <= '9') count++;
+// TASK C
+
+class Shop {
+    // Constructor
+    constructor (non, lagmon, cola) {
+        this.non = non;
+        this.lagmon = lagmon; 
+        this.cola = cola;
     }
-    console.log(count);
+
+    //Methods
+    qoldiq() {
+        const currentDate = new Date();
+        const currentTime = `${currentDate.getHours()}:${currentDate.getMinutes()}`
+        console.log(`Hozir ${currentTime}'da ${this.non}'ta non, ${this.lagmon}'ta lag'mon va ${this.cola}'ta cola mavjud.`);
+    }
+
+    sotish(item, quantity) {
+        if (this[item] !== undefined) {
+            this[item] -= quantity;
+            console.log(`${quantity} ta ${item} sotildi`);
+            } else {
+            console.log("Bunday mahsulot mavjud emas");
+        }
+    }
+
+    qabul(item, quantity) {
+        if (this[item] !== undefined) {
+            this[item] += quantity;
+            console.log(`${quantity} ta ${item} qabul qilindi`);
+            } else {
+            console.log("Bunday mahsulot mavjud emas");
+        }
+    }
 }
 
-countDigit("22osoif3o04");
+const shop = new Shop(4, 5, 2);
+shop.qoldiq();
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
+shop.qoldiq();
+
+// // TASK B
+
+// function countDigit(givenString) {
+//     let count = 0;
+//     for (const i of givenString) {
+//         if (i >= '0' && i <= '9') count++;
+//     }
+//     console.log(count);
+// }
+
+// countDigit("22osoif3o04");
+
+
+
+
 
 // // // TASK A
 
