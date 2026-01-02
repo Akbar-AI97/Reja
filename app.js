@@ -7,6 +7,7 @@ const { json } = require("stream/consumers");
 
 // MongoDB call
 const db = require("./server").db(); //Qalam
+const { ObjectId } = require("mongodb"); // used to string => ObjectID(string) 
 
 let user;
 fs.readFile("database/user.json", "utf-8", (err, data) => {
@@ -22,7 +23,6 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-
 //2: Session code
 
 //3: Views code
@@ -32,19 +32,21 @@ app.set("view engine", "ejs"); //BSSR: Backend Server Side Rendering (Creating F
 //4: Routing code
 app.post("/create-item", async (req, res) => {
     console.log("user entered to /create-item");
-    try {
-        // console.log(req.body);
-        const new_reja = {reja: req.body.reja};
-        db.collection("plans").insertOne(new_reja);
-        res.json({reja: new_reja.reja});
 
-        // const idString = new_reja._id.toString(); //Getting the "id" of item "new_reja"
-        // console.log(idString);
-    } catch {
-        console.log(err);
-        res.end("something went wrong");
-    }
-})
+    const new_reja = {reja: req.body.reja};
+    await db.collection("plans").insertOne(new_reja);
+    res.json({
+        _id: new_reja._id,
+        reja: new_reja.reja 
+    });
+});
+
+app.post("/delete-me", async (req, res) => {
+    console.log("user entered to /delete-me");
+
+    await db.collection("plans").deleteOne({_id: new ObjectId(req.body.id)});
+    res.json({state: "success"});
+});
 
 app.get("/", async (req, res) => {
     console.log("user entered to /");
