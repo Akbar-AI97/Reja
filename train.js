@@ -1,46 +1,63 @@
 // // // MITASKS
 
-// TASK C
+// TASK D
 
-class Shop {
-    // Constructor
-    constructor (non, lagmon, cola) {
-        this.non = non;
-        this.lagmon = lagmon; 
-        this.cola = cola;
-    }
+function checkContent(str1, str2) {
+  if (str1.length !== str2.length) return false;
 
-    //Methods
-    qoldiq() {
-        const currentDate = new Date();
-        const currentTime = `${currentDate.getHours()}:${currentDate.getMinutes()}`
-        console.log(`Hozir ${currentTime}'da ${this.non}'ta non, ${this.lagmon}'ta lag'mon va ${this.cola}'ta cola mavjud.`);
-    }
+  const a = str1.split("").sort().join("");
+  const b = str2.split("").sort().join("");
 
-    sotish(item, quantity) {
-        if (this[item] !== undefined) {
-            this[item] -= quantity;
-            console.log(`${quantity} ta ${item} sotildi`);
-            } else {
-            console.log("Bunday mahsulot mavjud emas");
-        }
-    }
-
-    qabul(item, quantity) {
-        if (this[item] !== undefined) {
-            this[item] += quantity;
-            console.log(`${quantity} ta ${item} qabul qilindi`);
-            } else {
-            console.log("Bunday mahsulot mavjud emas");
-        }
-    }
+  return a === b;
 }
 
-const shop = new Shop(4, 5, 2);
-shop.qoldiq();
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
-shop.qoldiq();
+// Test
+console.log(checkContent("Seoul", "Selou")); // true
+console.log(checkContent("hello", "olleh"));       // true
+console.log(checkContent("test", "best"));         // false
+
+
+// // TASK C
+
+// class Shop {
+//     // Constructor
+//     constructor (non, lagmon, cola) {
+//         this.non = non;
+//         this.lagmon = lagmon; 
+//         this.cola = cola;
+//     }
+
+//     //Methods
+//     qoldiq() {
+//         const currentDate = new Date();
+//         const currentTime = `${currentDate.getHours()}:${currentDate.getMinutes()}`
+//         console.log(`Hozir ${currentTime}'da ${this.non}'ta non, ${this.lagmon}'ta lag'mon va ${this.cola}'ta cola mavjud.`);
+//     }
+
+//     sotish(item, quantity) {
+//         if (this[item] !== undefined) {
+//             this[item] -= quantity;
+//             console.log(`${quantity} ta ${item} sotildi`);
+//             } else {
+//             console.log("Bunday mahsulot mavjud emas");
+//         }
+//     }
+
+//     qabul(item, quantity) {
+//         if (this[item] !== undefined) {
+//             this[item] += quantity;
+//             console.log(`${quantity} ta ${item} qabul qilindi`);
+//             } else {
+//             console.log("Bunday mahsulot mavjud emas");
+//         }
+//     }
+// }
+
+// const shop = new Shop(4, 5, 2);
+// shop.qoldiq();
+// shop.sotish("non", 3);
+// shop.qabul("cola", 4);
+// shop.qoldiq();
 
 // // TASK B
 
