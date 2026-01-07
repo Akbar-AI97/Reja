@@ -1,20 +1,39 @@
 // // // MITASKS
 
-// TASK D
+// TASK E
 
-function checkContent(str1, str2) {
-  if (str1.length !== str2.length) return false;
-
-  const a = str1.split("").sort().join("");
-  const b = str2.split("").sort().join("");
-
-  return a === b;
+function getReverse(myString) {
+  if(myString.length != 0) {
+    let newString = "";
+    for(let i = myString.length - 1; i >= 0; i--) {
+      newString += myString[i];
+    }
+     console.log(newString);
+  } else {
+    console.log("Please, enter your String: ");
+  }
 }
 
-// Test
-console.log(checkContent("Seoul", "Selou")); // true
-console.log(checkContent("hello", "olleh"));       // true
-console.log(checkContent("test", "best"));         // false
+getReverse("hello");
+getReverse("Hello World from Tekken");
+getReverse("");
+
+
+// // TASK D
+
+// function checkContent(str1, str2) {
+//   if (str1.length !== str2.length) return false;
+
+//   const a = str1.split("").sort().join("");
+//   const b = str2.split("").sort().join("");
+
+//   return a === b;
+// }
+
+// // Test
+// console.log(checkContent("Seoul", "Selou")); // true
+// console.log(checkContent("hello", "olleh"));       // true
+// console.log(checkContent("test", "best"));         // false
 
 
 // // TASK C

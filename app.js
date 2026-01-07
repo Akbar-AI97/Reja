@@ -19,9 +19,9 @@ fs.readFile("database/user.json", "utf-8", (err, data) => {
 });
 
 //1: Entry code
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.static("public")); // Middleware DP => opens access to public
+app.use(express.json()); // Middleware DP => Rest API support
+app.use(express.urlencoded({extended: true})); // Middleware DP => Traditional API support (e.g. Form)
 
 //2: Session code
 
