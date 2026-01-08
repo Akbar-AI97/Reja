@@ -1,22 +1,48 @@
 // // // MITASKS
 
-// TASK E
+// TASK F
 
-function getReverse(myString) {
-  if(myString.length != 0) {
-    let newString = "";
-    for(let i = myString.length - 1; i >= 0; i--) {
-      newString += myString[i];
+function findDoublers(string) {
+  string = string.toLowerCase();
+  const length = string.length - 1;
+  let bool = false;
+  for (let i = 0; i <= length; i++) {
+    let count = 0;
+    for (let j = 0; j <= length; j++) {
+      if (string[i] === string[j]) {
+        count += 1;
+      }
     }
-     console.log(newString);
-  } else {
-    console.log("Please, enter your String: ");
+    if (count >= 2) {
+      bool = true;
+      console.log(bool);
+      return;
+    }
   }
+  console.log(bool);
 }
 
-getReverse("hello");
-getReverse("Hello World from Tekken");
-getReverse("");
+findDoublers("project");
+findDoublers("Alhamdulillah");
+findDoublers("heLlo");
+
+// // TASK E
+
+// function getReverse(myString) {
+//   if(myString.length != 0) {
+//     let newString = "";
+//     for(let i = myString.length - 1; i >= 0; i--) {
+//       newString += myString[i];
+//     }
+//      console.log(newString);
+//   } else {
+//     console.log("Please, enter your String: ");
+//   }
+// }
+
+// getReverse("hello");
+// getReverse("Hello World from Tekken");
+// getReverse("");
 
 
 // // TASK D
